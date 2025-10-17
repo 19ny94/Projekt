@@ -97,6 +97,7 @@ int main(int argc, char *argv[])
                 enable[len] = next_char; // pokud program jeste symbol ne potkal, tak pridame jej na konec radku moznych symbolu
                 enable[len + 1] = '\0'; // pridame konec
                 len = strlen(enable);
+                qsort(enable, len); //vlastna funkce
                /* for (int i = 0; i < len; i++) {
                     for ( int j = i + 1; j < len; j++ ) {
                     if (enable[i] > enable[j]) { // nahrada misto qsort :)
@@ -106,7 +107,6 @@ int main(int argc, char *argv[])
                     }
                     
                 }*/
-                char* sort = qsort(enable, len);
             }
         }
     }
